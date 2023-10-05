@@ -59,9 +59,9 @@ client.player = new Manager({
   ],
   nodes: [
     {
-      host: "lavalink.devamop.in",
+      host: "eu-lavalink.lexnet.cc",
       port: 443,
-      password: "DevamOP",
+      password: "lexn3tl@val!nk",
       secure: true,
     },
   ],
@@ -118,8 +118,18 @@ client.login(process.env.DISCORD_TOKEN);
 process.on("unhandledRejection", (error) => {
   const embed = new Discord.MessageEmbed()
     .setTitle(`🚨・Unhandled promise rejection`)
-    .addField(`Error`, `\`\`\`${error}\`\`\``)
-    .addField(`Stack error`, `\`\`\`${error.stack}\`\`\``)
+    .addFields(
+      {
+        name: "Error",
+        value: `\`\`\`${error}\`\`\``,
+        inline: false,
+      },
+      {
+        name: `Stack error`,
+        value: `\`\`\`${error.stack}\`\`\``,
+        inline: false,
+      },
+    )
     .setColor(client.config.colors.normal);
   consoleLogs
     .send({
@@ -147,8 +157,18 @@ process.on("warning", (warn) => {
 client.on("shardError", (error) => {
   const embed = new Discord.MessageEmbed()
     .setTitle(`🚨・A websocket connection encountered an error`)
-    .addField(`Error`, `\`\`\`${error}\`\`\``)
-    .addField(`Stack error`, `\`\`\`${error.stack}\`\`\``)
+    .addFields(
+      {
+        name: "Error",
+        value: `\`\`\`${error}\`\`\``,
+        inline: false,
+      },
+      {
+        name: `Stack error`,
+        value: `\`\`\`${error.stack}\`\`\``,
+        inline: false,
+      },
+    )
     .setColor(client.config.colors.normal);
   consoleLogs.send({
     username: "Bot Logs",

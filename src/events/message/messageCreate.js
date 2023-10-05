@@ -24,8 +24,18 @@ module.exports = async (client, message) => {
     let embedLogs = new Discord.MessageEmbed()
       .setTitle(`💬・New DM message!`)
       .setDescription(`Bot has received a new DM message!`)
-      .addField("👤┆Send By", `${message.author} (${message.author.tag})`, true)
-      .addField(`💬┆Message`, `${message.content || "None"}`, true)
+      .addFields(
+        {
+          name: "👤┆Send By",
+          value: `${message.author} (${message.author.tag})`,
+          inline: true,
+        },
+        {
+          name: "💬┆Message",
+          value: `${message.content || "None"}`,
+          inline: true,
+        },
+      )
       .setColor(client.config.colors.normal)
       .setTimestamp();
 
@@ -33,7 +43,7 @@ module.exports = async (client, message) => {
       embedLogs.addField(
         `📃┆Attachments`,
         `${message.attachments.first()?.url}`,
-        false
+        false,
       );
     return dmlog.send({
       username: "Bot DM",
@@ -49,13 +59,13 @@ module.exports = async (client, message) => {
         const hasLeveledUp = await client.addXP(
           message.author.id,
           message.guild.id,
-          randomXP
+          randomXP,
         );
 
         if (hasLeveledUp) {
           const user = await client.fetchLevels(
             message.author.id,
-            message.guild.id
+            message.guild.id,
           );
 
           const levelData = await levelLogs.findOne({
@@ -69,19 +79,19 @@ module.exports = async (client, message) => {
             var levelMessage = messageData.Message;
             levelMessage = levelMessage.replace(
               `{user:username}`,
-              message.author.username
+              message.author.username,
             );
             levelMessage = levelMessage.replace(
               `{user:discriminator}`,
-              message.author.discriminator
+              message.author.discriminator,
             );
             levelMessage = levelMessage.replace(
               `{user:tag}`,
-              message.author.tag
+              message.author.tag,
             );
             levelMessage = levelMessage.replace(
               `{user:mention}`,
-              message.author
+              message.author,
             );
 
             levelMessage = levelMessage.replace(`{user:level}`, user.level);
@@ -129,7 +139,7 @@ module.exports = async (client, message) => {
                   .roles.add(data.Role)
                   .catch((e) => {});
               }
-            }
+            },
           );
         }
       }
@@ -154,7 +164,7 @@ module.exports = async (client, message) => {
                   .roles.add(data.Role);
               } catch {}
             }
-          }
+          },
         );
       } else {
         new messagesSchema({
@@ -163,7 +173,7 @@ module.exports = async (client, message) => {
           Messages: 1,
         }).save();
       }
-    }
+    },
   );
 
   // AFK system
@@ -181,7 +191,7 @@ module.exports = async (client, message) => {
             {
               desc: `${message.author} is no longer afk!`,
             },
-            message.channel
+            message.channel,
           )
           .then(async (m) => {
             setTimeout(() => {
@@ -194,7 +204,7 @@ module.exports = async (client, message) => {
           message.member.setNickname(name).catch((e) => {});
         }
       }
-    }
+    },
   );
 
   message.mentions.users.forEach(async (u) => {
@@ -208,10 +218,10 @@ module.exports = async (client, message) => {
           if (data) {
             client.simpleEmbed(
               { desc: `${u} is currently afk! **Reason:** ${data.Message}` },
-              message.channel
+              message.channel,
             );
           }
-        }
+        },
       );
     }
   });
@@ -225,7 +235,7 @@ module.exports = async (client, message) => {
       const input = message;
       try {
         fetch(
-          `https://api.monkedev.com/fun/chat?msg=${encodeURIComponent(input)}`
+          `https://api.monkedev.com/fun/chat?msg=${encodeURIComponent(input)}`,
         )
           .catch(() => {})
           .then((res) => res.json())
@@ -266,12 +276,12 @@ module.exports = async (client, message) => {
 
         const newMessage = await client.simpleEmbed(
           { desc: `${data.Content}` },
-          message.channel
+          message.channel,
         );
 
         data.LastMessage = newMessage.id;
         data.save();
-      }
+      },
     );
   } catch {}
 
@@ -303,7 +313,7 @@ module.exports = async (client, message) => {
 
   const escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   const prefixRegex = new RegExp(
-    `^(<@!?${client.user.id}>|${escapeRegex(prefix)})\\s*`
+    `^(<@!?${client.user.id}>|${escapeRegex(prefix)})\\s*`,
   );
 
   if (!prefixRegex.test(message.content.toLowerCase())) return;
@@ -321,14 +331,14 @@ module.exports = async (client, message) => {
       new Discord.MessageButton()
         .setLabel("Invite")
         .setURL(
-          "https://discord.com/oauth2/authorize?&client_id=798144456528363550&scope=applications.commands+bot&permissions=8"
+          "https://discord.com/oauth2/authorize?&client_id=798144456528363550&scope=applications.commands+bot&permissions=8",
         )
         .setStyle("LINK"),
 
       new Discord.MessageButton()
         .setLabel("Support server")
         .setURL("https://discord.gg/56FZySQaY7")
-        .setStyle("LINK")
+        .setStyle("LINK"),
     );
 
     client
@@ -337,10 +347,11 @@ module.exports = async (client, message) => {
           title: "Hi, i'm Bot",
           desc: `Use with commands via Discord ${client.emotes.normal.slash} commands`,
           fields: [
-           {
-                name: "📢┆Alert!",
-                value: 'After more than 1 year we decided to stop Bot on April 15th, for more information go to [this server](https://discord.gg/techpoint)',
-                inline: false,
+            {
+              name: "📢┆Alert!",
+              value:
+                "After more than 1 year we decided to stop Bot on April 15th, for more information go to [this server](https://discord.gg/techpoint)",
+              inline: false,
             },
             {
               name: "📨┆Invite me",
@@ -362,7 +373,7 @@ module.exports = async (client, message) => {
           ],
           components: [row],
         },
-        message.channel
+        message.channel,
       )
       .catch(() => {});
   }
@@ -387,7 +398,7 @@ module.exports = async (client, message) => {
         {
           desc: `${cmdx.Responce}`,
         },
-        message.channel
+        message.channel,
       );
     } else if (cmdx.Action == "DM") {
       return message.author.send({ content: cmdx.Responce }).catch((e) => {
@@ -395,7 +406,7 @@ module.exports = async (client, message) => {
           {
             error: "I can't DM you, maybe you have DM turned off!",
           },
-          message.channel
+          message.channel,
         );
       });
     }
@@ -406,14 +417,14 @@ module.exports = async (client, message) => {
       new Discord.MessageButton()
         .setLabel("Invite")
         .setURL(
-          "https://discord.com/oauth2/authorize?&client_id=798144456528363550&scope=applications.commands+bot&permissions=8"
+          "https://discord.com/oauth2/authorize?&client_id=798144456528363550&scope=applications.commands+bot&permissions=8",
         )
         .setStyle("LINK"),
 
       new Discord.MessageButton()
         .setLabel("Support server")
         .setURL("https://discord.gg/56FZySQaY7")
-        .setStyle("LINK")
+        .setStyle("LINK"),
     );
 
     client.embed(
@@ -421,22 +432,21 @@ module.exports = async (client, message) => {
         title: "👋・Hi, i'm Bot",
         desc: `Bot is now completely in ${client.emotes.normal.slash} commands. The current message commands have expired! Try our new improved commands and make your server better with Bot!`,
         fields: [
-           {
-                name: "📢┇Alert!",
-                value: 'After more than 1 year we decided to stop Bot on April 15th, for more information go to [this server](https://discord.gg/techpoint)',
-                inline: false,
-            },
-            {
+          {
+            name: "📢┇Alert!",
+            value:
+              "After more than 1 year we decided to stop Bot on April 15th, for more information go to [this server](https://discord.gg/techpoint)",
+            inline: false,
+          },
+          {
             name: "❓┇I don't see any slash commands",
             value:
               "The bot may not have permissions for this. Open the invite link again and select your server. The bot then gets the correct permissions",
-           },
+          },
         ],
         components: [row],
       },
-      message.channel
+      message.channel,
     );
   }
 };
-
- 

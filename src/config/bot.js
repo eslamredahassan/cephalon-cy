@@ -1,19 +1,20 @@
 module.exports = {
-    colors: {
-        succes: '#57F287',
-        error: "#ED4245",
-        normal: "#5865F2"
-    },
+  colors: {
+    succes: "#57F287",
+    error: "#ED4245",
+    normal: "#5865F2",
+  },
 
-    discord: {
-        id: "815210279834878003",
-        prefix: 'd!',
-        footer: `© Bot 2021 - ${new Date().getFullYear()}`, 
-        botInvite: "https://discord.com/oauth2/authorize?&client_id=QQQQQQQQQQQQ&scope=applications.commands+bot&permissions=8",
-        serverInvite: "https://discord.gg/QQQQQQQQ",
-    },
+  discord: {
+    id: "815210279834878003",
+    prefix: "d!",
+    footer: `© EGYGUARD 2023 - ${new Date().getFullYear()}`,
+    botInvite:
+      "https://discord.com/oauth2/authorize?&client_id=QQQQQQQQQQQQ&scope=applications.commands+bot&permissions=8",
+    serverInvite: "https://discord.gg/hRVfvHjrEz",
+  },
 
-    wordList: `Airplane
+  wordList: `Airplane
 Ears
 Piano
 Angry
@@ -1062,7 +1063,5 @@ yet
 you
 young
 your
-yourself`
-}
-
- 
+yourself`,
+};

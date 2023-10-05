@@ -53,8 +53,18 @@ manager.on("shardCreate", (shard) => {
   let embed = new Discord.MessageEmbed()
     .setTitle(`🆙・Launching shard`)
     .setDescription(`A shard has just been launched`)
-    .addField("🆔┆ID", `${shard.id + 1}/${manager.totalShards}`, true)
-    .addField(`📃┆State`, `Starting up...`, true)
+    .addFields(
+      {
+        name: "🆔┆ID",
+        value: `${shard.id + 1}/${manager.totalShards}`,
+        inline: true,
+      },
+      {
+        name: `📃┆State`,
+        value: `Starting up...`,
+        inline: true,
+      },
+    )
     .setColor(config.colors.normal);
   startLogs.send({
     username: "Bot Logs",
@@ -75,8 +85,18 @@ manager.on("shardCreate", (shard) => {
       .setTitle(
         `🚨・Closing shard ${shard.id + 1}/${manager.totalShards} unexpectedly`,
       )
-      .addField("PID", `\`${process.pid}\``)
-      .addField("Exit code", `\`${process.exitCode}\``)
+      .addFields(
+        {
+          name: "PID",
+          value: `\`${process.pid}\``,
+          inline: false,
+        },
+        {
+          name: `Exit code`,
+          value: `\`${process.exitCode}\``,
+          inline: false,
+        },
+      )
       .setColor(config.colors.normal);
     shardLogs.send({
       username: "Bot Logs",
@@ -90,8 +110,18 @@ manager.on("shardCreate", (shard) => {
             manager.totalShards
           } exited with NULL error code!`,
         )
-        .addField("PID", `\`${process.pid}\``)
-        .addField("Exit code", `\`${process.exitCode}\``)
+        .addFields(
+          {
+            name: "PID",
+            value: `\`${process.pid}\``,
+            inline: false,
+          },
+          {
+            name: `Exit code`,
+            value: `\`${process.exitCode}\``,
+            inline: false,
+          },
+        )
         .setColor(config.colors.normal);
       shardLogs.send({
         username: "Bot Logs",

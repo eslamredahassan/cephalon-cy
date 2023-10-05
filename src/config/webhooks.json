@@ -1,58 +1,58 @@
 {
-    "startLogs": {
-        "id": "1014567595841691659",
-        "token": "abzPe2L3SaPobBXODN-F1Ez4nmgrcTdJm-LUMe58oYP-JvKPz_htJIUxr75po06HUKog"
-    },
-    "shardLogs": {
-        "id": "1014567595841691659",
-        "token": "abzPe2L3SaPobBXODN-F1Ez4nmgrcTdJm-LUMe58oYP-JvKPz_htJIUxr75po06HUKog"
-    },
-    "errorLogs": {
-        "id": "1014567595841691659",
-        "token": "abzPe2L3SaPobBXODN-F1Ez4nmgrcTdJm-LUMe58oYP-JvKPz_htJIUxr75po06HUKog"
-    },
-    "dmLogs": {
-        "id": "1014567595841691659",
-        "token": "abzPe2L3SaPobBXODN-F1Ez4nmgrcTdJm-LUMe58oYP-JvKPz_htJIUxr75po06HUKog"
-    },
-    "voiceLogs": {
-        "id": "1014567595841691659",
-        "token": "abzPe2L3SaPobBXODN-F1Ez4nmgrcTdJm-LUMe58oYP-JvKPz_htJIUxr75po06HUKog"
-    },
-    "serverLogs": {
-        "id": "1014567595841691659",
-        "token": "abzPe2L3SaPobBXODN-F1Ez4nmgrcTdJm-LUMe58oYP-JvKPz_htJIUxr75po06HUKog"
-    },
-    "serverLogs2": {
-        "id": "1014567595841691659",
-        "token": "abzPe2L3SaPobBXODN-F1Ez4nmgrcTdJm-LUMe58oYP-JvKPz_htJIUxr75po06HUKog"
-    },
-    "commandLogs": {
-        "id": "1014567595841691659",
-        "token": "abzPe2L3SaPobBXODN-F1Ez4nmgrcTdJm-LUMe58oYP-JvKPz_htJIUxr75po06HUKog"
-    },
-    "consoleLogs": {
-        "id": "1014567595841691659",
-        "token": "abzPe2L3SaPobBXODN-F1Ez4nmgrcTdJm-LUMe58oYP-JvKPz_htJIUxr75po06HUKog"
-    },
-    "warnLogs": {
-        "id": "1014567595841691659",
-        "token": "abzPe2L3SaPobBXODN-F1Ez4nmgrcTdJm-LUMe58oYP-JvKPz_htJIUxr75po06HUKog"
-    },
-    "voiceErrorLogs": {
-        "id": "1014567595841691659",
-        "token": "abzPe2L3SaPobBXODN-F1Ez4nmgrcTdJm-LUMe58oYP-JvKPz_htJIUxr75po06HUKog"
-    },
-    "creditLogs": {
-        "id": "1014567595841691659",
-        "token": "abzPe2L3SaPobBXODN-F1Ez4nmgrcTdJm-LUMe58oYP-JvKPz_htJIUxr75po06HUKog"
-    },
-    "evalLogs": {
-        "id": "1014567595841691659",
-        "token": "abzPe2L3SaPobBXODN-F1Ez4nmgrcTdJm-LUMe58oYP-JvKPz_htJIUxr75po06HUKog"
-    },
-    "interactionLogs": {
-        "id": "1014567595841691659",
-        "token": "abzPe2L3SaPobBXODN-F1Ez4nmgrcTdJm-LUMe58oYP-JvKPz_htJIUxr75po06HUKog"
-    }
+  "startLogs": {
+    "id": "1054363345655963750",
+    "token": "wKcZILexMFFf9G8AkgnSCIYyijXK_yDdlk0h6JFb40A2_orPjTSwPmUYtNsO8bB9nw8s"
+  },
+  "shardLogs": {
+    "id": "1054363345655963750",
+    "token": "wKcZILexMFFf9G8AkgnSCIYyijXK_yDdlk0h6JFb40A2_orPjTSwPmUYtNsO8bB9nw8s"
+  },
+  "errorLogs": {
+    "id": "1054363345655963750",
+    "token": "wKcZILexMFFf9G8AkgnSCIYyijXK_yDdlk0h6JFb40A2_orPjTSwPmUYtNsO8bB9nw8s"
+  },
+  "dmLogs": {
+    "id": "1054363345655963750",
+    "token": "wKcZILexMFFf9G8AkgnSCIYyijXK_yDdlk0h6JFb40A2_orPjTSwPmUYtNsO8bB9nw8s"
+  },
+  "voiceLogs": {
+    "id": "1054363345655963750",
+    "token": "wKcZILexMFFf9G8AkgnSCIYyijXK_yDdlk0h6JFb40A2_orPjTSwPmUYtNsO8bB9nw8s"
+  },
+  "serverLogs": {
+    "id": "1054363345655963750",
+    "token": "wKcZILexMFFf9G8AkgnSCIYyijXK_yDdlk0h6JFb40A2_orPjTSwPmUYtNsO8bB9nw8s"
+  },
+  "serverLogs2": {
+    "id": "1054363345655963750",
+    "token": "wKcZILexMFFf9G8AkgnSCIYyijXK_yDdlk0h6JFb40A2_orPjTSwPmUYtNsO8bB9nw8s"
+  },
+  "commandLogs": {
+    "id": "1054363345655963750",
+    "token": "wKcZILexMFFf9G8AkgnSCIYyijXK_yDdlk0h6JFb40A2_orPjTSwPmUYtNsO8bB9nw8s"
+  },
+  "consoleLogs": {
+    "id": "1054363345655963750",
+    "token": "wKcZILexMFFf9G8AkgnSCIYyijXK_yDdlk0h6JFb40A2_orPjTSwPmUYtNsO8bB9nw8s"
+  },
+  "warnLogs": {
+    "id": "1054363345655963750",
+    "token": "wKcZILexMFFf9G8AkgnSCIYyijXK_yDdlk0h6JFb40A2_orPjTSwPmUYtNsO8bB9nw8s"
+  },
+  "voiceErrorLogs": {
+    "id": "1054363345655963750",
+    "token": "wKcZILexMFFf9G8AkgnSCIYyijXK_yDdlk0h6JFb40A2_orPjTSwPmUYtNsO8bB9nw8s"
+  },
+  "creditLogs": {
+    "id": "1054363345655963750",
+    "token": "wKcZILexMFFf9G8AkgnSCIYyijXK_yDdlk0h6JFb40A2_orPjTSwPmUYtNsO8bB9nw8s"
+  },
+  "evalLogs": {
+    "id": "1054363345655963750",
+    "token": "wKcZILexMFFf9G8AkgnSCIYyijXK_yDdlk0h6JFb40A2_orPjTSwPmUYtNsO8bB9nw8s"
+  },
+  "interactionLogs": {
+    "id": "1054363345655963750",
+    "token": "wKcZILexMFFf9G8AkgnSCIYyijXK_yDdlk0h6JFb40A2_orPjTSwPmUYtNsO8bB9nw8s"
+  }
 }
