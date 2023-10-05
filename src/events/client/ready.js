@@ -20,7 +20,7 @@ module.exports = async (client) => {
     if (s >= activities.length) s = 0;
     client.user.setStatus(status[s]);
     s++;
-  }, 30000);
+  }, 60000);
 
   client.player.init(client.user.id);
   console.log(
