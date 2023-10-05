@@ -13,7 +13,7 @@ module.exports = async (client) => {
     if (i >= activities.length) i = 0;
     client.user.setActivity(activities[i]);
     i++;
-  }, 5000);
+  }, 50000);
 
   let s = 0;
   setInterval(() => {
